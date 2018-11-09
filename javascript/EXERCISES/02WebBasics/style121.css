@@ -1,0 +1,31 @@
+.price {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 2541px;
+  height: 3200px;
+  z-index: 85;
+}
+.price {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: rgb(44, 48, 61);
+  font-weight: bold;
+  text-decoration: line-through;
+  line-height: 2.031;
+  text-align: center;
+  position: absolute;
+  left: 1678px;
+  top: 1394.541px;
+  z-index: 84;
+}
+.background {
+  background-image: url("background.png");
+  position: absolute;
+  left: 1668px;
+  top: 1367px;
+  width: 148px;
+  height: 22px;
+  z-index: 83;
+}
+
