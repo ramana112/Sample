@@ -1,0 +1,48 @@
+<html> 
+<head> 
+<title>Diamond Pattern</title> 
+</head> 
+<body> 
+
+<script type = "text/javascript">
+
+function diamond(n) {
+console.log(n)
+if (n% 2 == 0 )   {
+alert( "Odd numbers only!" );
+return false;
+}
+
+document.write("<pre>");
+
+// top
+for(i=1; i<=n; i+=2) {
+for (s=0; s<(n-i/2-n/2); s++) { // -n/2 positions diamond pattern at left hand edge of page
+document.write(" ");
+}
+for (j=1; j<=i; j++) {
+document.write("*");
+}
+document.write("<br>")
+}
+
+// bottom
+for (i=n-2; i>=0; i=i-2) {
+for (s=0; s<(n-i/2-n/2); s++) {
+document.write(" ");
+}
+for (j=1; j<=i; j++) {
+document.write("*");
+}
+document.write("<br>")
+}
+
+document.write("</pre>");
+}
+
+diamond(7);
+
+</script>
+
+</body> 
+</html>

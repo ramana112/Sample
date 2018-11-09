@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <SCRIPT LANGUAGE="JavaScript">     
+        function compute() {
+        var unformatted_tax = document.forms[0].cost.value;
+        document.forms[0].unformatted_tax.value=unformatted_tax;
+        document.forms[0].formatted_tax.value=(unformatted_tax)*(document.forms[0].tax.value)/100;
+        document.forms[0].total_cost.value=unformatted_tax-((unformatted_tax)*(document.forms[0].tax.value)/100);
+        }
+        function resetIt() {
+        document.forms[0].unformatted_tax.value="";
+        document.forms[0].formatted_tax.value="";
+        document.forms[0].total_cost.value="";
+        }
+        // End -->
+        </SCRIPT>
+</head>
+<body>
+    <CENTER>
+        <FORM>
+        <TABLE BORDER=2 WIDTH=300 CELLPADDING=3>
+        <TR>
+        <TD align="center"><FONT SIZE=+1><STRONG>Salary</STRONG></FONT>
+        <TD align="center"><FONT SIZE=+1><STRONG>Rate of Tax</STRONG></FONT>
+        </TR>
+        <TR>
+        <TD align="center"><INPUT TYPE="text" NAME="cost" VALUE="25000" SIZE=10>
+        <TD align="center"><INPUT TYPE="text" NAME="tax" VALUE="10" SIZE=10>
+        </TR>
+        </TABLE>
+        <BR>
+        <TABLE BORDER=1 WIDTH=600 CELLPADDING=3>
+        <TR>
+        <TD align="center"><FONT SIZE=+1><STRONG>Gross Salary</STRONG></FONT>
+        <TD align="center"><FONT SIZE=+1><STRONG>Tax Amount</STRONG></FONT>
+        <TD align="center"><FONT SIZE=+1><STRONG>Net Salary</STRONG></FONT>
+        </TR>
+        <TR>
+        <TD align="center"><INPUT TYPE="text" NAME="unformatted_tax" SIZE=15>
+        <TD align="center"><INPUT TYPE="text" NAME="formatted_tax" SIZE=15>
+        <TD align="center"><INPUT TYPE="text" NAME="total_cost" SIZE=15>
+        </TR>
+        </TABLE>
+        <BR>
+        <TABLE BORDER=0 WIDTH=400 CELLPADDING=5>
+        <TR>
+        <TD align="center"><INPUT TYPE="reset"  VALUE="RESET" onClick="resetIt()">
+        <TD align="center"><INPUT TYPE="button" VALUE="COMPUTE" onclick="compute()">
+        </TR>
+        </TABLE>
+        </FORM>
+        </CENTER>
+</body>
+</html>
